@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1.1 (Python 3.13.0 on win32)" generated="2024-11-22T21:35:38.196090" rpa="false" schemaversion="5">
+<suite id="s1" name="Assessment Tests" source="C:\Users\ASUS\Desktop\Automation\automation-answer\tests\assessment_tests.robot">
+<test id="s1-t1" name="Submit A New Application Successfully" line="13">
+<kw name="Given I go to the URL provided">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-11-22T21:35:38.402956" level="INFO">Opening browser 'chrome' to base url 'https://automationinterface1.front.staging.optimy.net/en/'.</msg>
+<arg>${URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-11-22T21:35:38.402748" elapsed="5.475840"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-11-22T21:35:43.878816" elapsed="0.030714"/>
+</kw>
+<status status="PASS" start="2024-11-22T21:35:38.402149" elapsed="5.507525"/>
+</kw>
+<kw name="And I handle cookie consent">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>css=button#cookie-allow-all-button</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-11-22T21:35:43.910449" elapsed="0.239787"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-11-22T21:35:44.150559" level="INFO">Clicking button 'css=button#cookie-allow-all-button'.</msg>
+<arg>css=button#cookie-allow-all-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-22T21:35:44.150392" elapsed="0.080280"/>
+</kw>
+<status status="PASS" start="2024-11-22T21:35:43.910066" elapsed="0.320715"/>
+</kw>
+<kw name="When I log in with valid credentials given">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-22T21:35:44.231532" level="INFO">Clicking element 'css=a[href="/en/user/login/"]'.</msg>
+<arg>css=a[href="/en/user/login/"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-22T21:35:44.231377" elapsed="2.258905"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-22T21:35:46.490958" level="INFO">Typing text 'optimyautomationtester@gmail.com' into text field 'css=input#login-email'.</msg>
+<arg>css=input#login-email</arg>
+<arg>${USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-22T21:35:46.490630" elapsed="0.108898"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-22T21:35:46.599885" level="INFO">Typing text 'yRMhojb7' into text field 'css=input[type="password"]'.</msg>
+<arg>css=input[type="password"]</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-22T21:35:46.599685" elapsed="0.071826"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-11-22T21:35:46.671862" level="INFO">Clicking button 'css=button[type="submit"]'.</msg>
+<arg>css=button[type="submit"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-22T21:35:46.671680" elapsed="1.833750"/>
+</kw>
+<status status="PASS" start="2024-11-22T21:35:44.231152" elapsed="4.274381"/>
+</kw>
+<kw name="And I submit a new application">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>css=a[href="/en/project/new/"]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-11-22T21:35:48.506121" elapsed="0.012103"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-22T21:35:48.518545" level="INFO">Clicking element 'css=a[href="/en/project/new/"]'.</msg>
+<arg>css=a[href="/en/project/new/"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-22T21:35:48.518387" elapsed="1.492702"/>
+</kw>
+<status status="PASS" start="2024-11-22T21:35:48.505897" elapsed="1.505295"/>
+</kw>
+<kw name="And I fill out the form with unique and random data">
+<kw name="Generate Random Data">
+<kw name="Convert To Integer" owner="BuiltIn">
+<msg time="2024-11-22T21:35:50.012240" level="INFO">${length} = 10</msg>
+<var>${length}</var>
+<arg>${length}</arg>
+<doc>Converts the given item to an integer number.</doc>
+<status status="PASS" start="2024-11-22T21:35:50.012051" elapsed="0.000216"/>
+</kw>
+<kw name="Generate Random String" owner="variables">
+<msg time="2024-11-22T21:35:50.012507" level="INFO">${random_name} = fyurpLckss</msg>
+<var>${random_name}</var>
+<arg>${length}</arg>
+<status status="PASS" start="2024-11-22T21:35:50.012362" elapsed="0.000170"/>
+</kw>
+<kw name="Generate Random Email" owner="variables">
+<msg time="2024-11-22T21:35:50.012722" level="INFO">${random_email} = user557@example.com</msg>
+<var>${random_email}</var>
+<status status="PASS" start="2024-11-22T21:35:50.012618" elapsed="0.000131"/>
+</kw>
+<kw name="Generate Random Phone" owner="variables">
+<msg time="2024-11-22T21:35:50.012937" level="INFO">${random_phone} = 3033056629</msg>
+<var>${random_phone}</var>
+<status status="PASS" start="2024-11-22T21:35:50.012832" elapsed="0.000129"/>
+</kw>
+<return>
+<value>${random_name}</value>
+<value>${random_email}</value>
+<value>${random_phone}</value>
+<status status="PASS" start="2024-11-22T21:35:50.013014" elapsed="0.000057"/>
+</return>
+<msg time="2024-11-22T21:35:50.013245" level="INFO">${random_name} = fyurpLckss</msg>
+<msg time="2024-11-22T21:35:50.013283" level="INFO">${random_email} = user557@example.com</msg>
+<msg time="2024-11-22T21:35:50.013317" level="INFO">${random_phone} = 3033056629</msg>
+<var>${random_name}</var>
+<var>${random_email}</var>
+<var>${random_phone}</var>
+<arg>${random_length}</arg>
+<status status="PASS" start="2024-11-22T21:35:50.011818" elapsed="0.001520"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-22T21:35:50.013593" level="INFO">Typing text 'fyurpLckss' into text field 'css=input[name="name"]'.</msg>
+<msg time="2024-11-22T21:35:50.175664" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-11-22T21:35:50.175805" level="FAIL">Element with locator 'css=input[name="name"]' not found.</msg>
+<arg>css=input[name="name"]</arg>
+<arg>${random_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="FAIL" start="2024-11-22T21:35:50.013436" elapsed="0.164676">Element with locator 'css=input[name="name"]' not found.</status>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>css=input[name="email"]</arg>
+<arg>${random_email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-11-22T21:35:50.178272" elapsed="0.000030"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>css=input[name="phone"]</arg>
+<arg>${random_phone}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-11-22T21:35:50.178398" elapsed="0.000024"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>css=button#next</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-11-22T21:35:50.178507" elapsed="0.000030"/>
+</kw>
+<status status="FAIL" start="2024-11-22T21:35:50.011554" elapsed="0.167091">Element with locator 'css=input[name="name"]' not found.</status>
+</kw>
+<kw name="Then I should verify the summary page of the data">
+<status status="NOT RUN" start="2024-11-22T21:35:50.178976" elapsed="0.000031"/>
+</kw>
+<kw name="And I validate and send the application">
+<status status="NOT RUN" start="2024-11-22T21:35:50.179265" elapsed="0.000030"/>
+</kw>
+<kw name="Then I should verify the &quot;Thank you for submitting your project&quot; page">
+<status status="NOT RUN" start="2024-11-22T21:35:50.179576" elapsed="0.000126"/>
+</kw>
+<doc>Automates the application submission process and validates successful submission.</doc>
+<tag>SmokeTest</tag>
+<status status="FAIL" start="2024-11-22T21:35:38.401351" elapsed="11.778650">Element with locator 'css=input[name="name"]' not found.</status>
+</test>
+<status status="FAIL" start="2024-11-22T21:35:38.197305" elapsed="11.984373"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">SmokeTest</stat>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Assessment Tests">Assessment Tests</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

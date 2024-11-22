@@ -26,7 +26,8 @@ my_test_framework/
 ## How to Run the Test Scripts
 1. Clone the repository
    Open a terminal and input the following:
-	git clone https://github.com/KlawMamba/automation-answer/
+	git clone https://github.com/KlawMamba/automation-answer.git
+
 	cd C:\Users\ASUS\Desktop\Automation\automation-answer
 2. To run the test script, use this in the terminal with the corresponding name:
     robot -d results assessment_tests.robot

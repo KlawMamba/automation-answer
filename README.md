@@ -30,6 +30,8 @@ my_test_framework/
 
 	cd C:\Users\ASUS\Desktop\Automation\automation-answer
 2. To run the test script, use this in the terminal with the corresponding name:
+    cd C:\Users\ASUS\Desktop\Automation\automation-answer\tests\
+
     robot -d results assessment_tests.robot
 
 ## Remarks
